@@ -1,5 +1,5 @@
 import random
-import GuessingGame
+from GuessingGame import GuessingGame
 
 game = GuessingGame(random.randint(1,100))
 last_guess  = None
@@ -10,7 +10,7 @@ while game.solved() == False:
     print(f'Oops! Your last guess ({last_guess}) was {last_result}.')
     print("")
 
-  last_guess  = input("Enter your guess: ")
+  last_guess  = int(input("Enter your guess: "))
   last_result = game.guess(last_guess)
 
 
